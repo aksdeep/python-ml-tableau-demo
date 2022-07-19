@@ -6,16 +6,25 @@ Basic app for serving a Tableu Public Workbook + Serving ML as an API
 Requirements list: Requirements.txt file has the all the packages you want plus more
 
 ## Directory Structure
-app.py
-templates
-	-> home.html
-	-> dashboards.html
-	-> machinelearning.html
-	-> js -> app.js
+
+├── app.py
+├── templates
+│   ├── home.html
+│   ├── dashboards.html
+│ 	├── machinelearning.html
+│   └── js
+│ 		└── app.js
+│ 	
+├── finalized_model.sav
+├── minmax_scaler.sav
+├── label_encoder.sav
+├── TrainingAndSavingModel.ipynb
+├── 500_Person_Gender_Height_Weight_Index.csv
+└── README.md
 
 ## Steps to deploy
-Create a Python Environment if you do not have Python requirement files
-And pip3 install requirements.txt if you do not have Python installed to already
+If you do not have Python environment, Create a Python Environment 
+And pip3 install requirements.txt in that environment 
 
 ## Steps that are used to set up ML algorithm
 1) Use the TrainAndSaveModel.ipynb notebook to train the model
@@ -30,7 +39,9 @@ https://www.kaggle.com/datasets/yersever/500-person-gender-height-weight-bodymas
 
 ## Guide to update the webpage
 1) Open the webpage - Use Dashboards link to view Tableau page
-2) Open the webpage - Use MachineLearning link to view Machine learning form
+2) Open the ipynb file in Jupyter notebook and update the file to train and save the model
+2) Open the webpage - Use machinelearning.html to update the input fields and model inputs
+4) Open the app.py - change the calculate_bmi function to your own ML algorithm inputs and output
 
 
 
